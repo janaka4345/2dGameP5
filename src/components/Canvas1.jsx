@@ -18,10 +18,21 @@ function setup(p5) {
 
 function draw(p5) {
   return () => {
-    // console.log(img.width, img.height);
+    // console.log(spriteWidth, spriteHeight, p5.width, p5.height);
     p5.background(250);
     // Draw the preloaded image on the canvas
-    p5.image(img, 0, 0, 4000, 2000);
+    p5.image(
+      img,
+      0,
+      0,
+      p5.width,
+      p5.height,
+      0,
+      0,
+      img.width / 12,
+      img.height / 10,
+      p5.CONTAIN,
+    );
   };
 }
 
